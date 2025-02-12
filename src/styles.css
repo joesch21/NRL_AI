@@ -15,7 +15,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(133, 124, 124, 0.5);
   z-index: 0;
 }
 
@@ -140,7 +140,7 @@ h2 {
   padding: 20px;
   background: rgba(255, 215, 0, 0.95); /* Lighter Gold */
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(196, 191, 191, 0.3);
 }
 
 .sponsor-text {
@@ -174,15 +174,39 @@ h2 {
   filter: brightness(1.1); /* Slightly brighter */
 }
 
-/* Fix Dark Background */
 .footer {
-  background: rgba(255, 215, 0, 0.98); /* Brighter Gold */
-  padding: 20px;
   text-align: center;
-  color: #002b5c; /* Darker blue for contrast */
-  font-size: 1.1em;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Light background */
+  border-top: 2px solid #0055aa;
+  position: relative;
+  z-index: 10;
+}
+
+.sponsor-text {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #002b5c;
+}
+
+.sponsor-link {
+  color: #0055aa;
+  text-decoration: none;
   font-weight: bold;
 }
+
+.sponsor-link:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+.sponsor-gif {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
 
 
 /* Mobile Optimization */
