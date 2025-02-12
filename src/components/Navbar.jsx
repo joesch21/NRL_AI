@@ -5,7 +5,7 @@ import "../styles.css";
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <Link to="/">NRL AI Game Predictor</Link>
+      <Link to="/">Pre-match Team analysis</Link>
     </nav>
   );
 }

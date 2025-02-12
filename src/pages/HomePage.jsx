@@ -22,8 +22,8 @@ export default function HomePage() {
 
       {/* Main content container */}
       <div className="container">
-        <h1>Round 1 NRL AI Game Predictor</h1>
-        <p>Click on a match to see AI-generated predictions.</p>
+        <h1>Round 1 NRL Ai Game Predictor</h1>
+        <p>Click on a match to see Ai-generated predictions.</p>
 
         {/* Render match fixtures */}
         {fixtures.map((fixture) => (

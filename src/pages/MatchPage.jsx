@@ -32,8 +32,8 @@ export default function MatchPage() {
         body: JSON.stringify({
           model: "gpt-4",
           messages: [
-            { role: "system", content: "You are an NRL analyst providing match predictions." },
-            { role: "user", content: `Analyze the game between ${fixture.awayTeam} and ${fixture.homeTeam} at ${fixture.venue} on ${fixture.date}. Provide key players, team strengths, and a predicted outcome.` }
+            { role: "system", content: "You are an NRL analyst providing pre-match analysis and likely winner." },
+            { role: "user", content: `Analyze the game between ${fixture.awayTeam} and ${fixture.homeTeam} at ${fixture.venue} on ${fixture.date}. Provide key players, team strengths, and a predicted outcome with a likely score.` }
           ],
           temperature: 0.8,
         }),

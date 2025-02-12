@@ -8,24 +8,25 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Remove conflicting background color */
+/* BODY - Remove global background conflicts */
 body {
   margin: 0;
   padding: 0;
 }
 
-/* Keep global text styles but remove background conflicts */
+/* TEXT LINKS - Maintain consistency */
 a {
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: #0055aa; /* Adjusted to match theme */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-  color: #535bf2;
+  color: #003366;
 }
 
-/* Remove button background overrides */
+/* BUTTON STYLES - Minimal interference */
 button {
   border-radius: 8px;
   padding: 0.6em 1.2em;
@@ -33,16 +34,17 @@ button {
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.25s ease-in-out;
 }
 
 button:hover {
-  border-color: #646cff;
+  background-color: #003366;
+  color: white;
 }
 
-/* Keep overlay effect */
+/* OVERLAY - Keeps dark effect without interfering */
 .overlay {
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   position: absolute;
