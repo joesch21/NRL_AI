@@ -1,0 +1,30 @@
+{
+  "round": 1,
+  "fixtures": [
+    {
+      "date": "Sunday, March 2, 2025",
+      "matches": [
+        {
+          "teams": "Canberra Raiders vs. New Zealand Warriors",
+          "venue": "Allegiant Stadium, Las Vegas",
+          "time": "11:00 AM AEDT"
+        },
+        {
+          "teams": "Penrith Panthers vs. Cronulla-Sutherland Sharks",
+          "venue": "Allegiant Stadium, Las Vegas",
+          "time": "3:30 PM AEDT"
+        }
+      ]
+    },
+    {
+      "date": "Thursday, March 6, 2025",
+      "matches": [
+        {
+          "teams": "Sydney Roosters vs. Brisbane Broncos",
+          "venue": "Allianz Stadium",
+          "time": "8:00 PM AEDT"
+        }
+      ]
+    }
+  ]
+}

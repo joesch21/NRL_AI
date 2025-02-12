@@ -1,0 +1,144 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: url('/images/nrlbackground.webp') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+/* Page Container */
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 85%;
+  margin: 30px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Ensure text inside the container is black */
+.container h1,
+.container p {
+  color: black !important;
+}
+
+
+/* Navbar */
+.navbar {
+  background: #002b5c;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #f9d835;
+}
+
+/* Match List */
+.match-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Match Card */
+.match-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 6px solid #0055aa;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensures buttons are centered properly */
+}
+
+.match-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Buttons - Clean Consistent Look */
+.button {
+  display: inline-block;
+  width: auto; /* Keeps buttons compact */
+  max-width: 220px;
+  padding: 12px 15px;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background: #0055aa;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  margin-top: 15px; /* Keeps spacing consistent */
+}
+
+.button:hover {
+  background-color: #003366;
+  transform: scale(1.05);
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #003366;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #002b5c;
+  margin-bottom: 8px;
+}
+
+/* Match Date */
+.match-date {
+  font-size: 1em;
+  color: #0055aa;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  .match-card {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  .button {
+    font-size: 0.9em;
+  }
+}
