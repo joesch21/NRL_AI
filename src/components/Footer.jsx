@@ -15,7 +15,7 @@ export default function Footer() {
         </a>
       </p>
       <img
-        src="/public/Condor_Gif.gif"
+        src="/Condor_Gif.gif"
         alt="Gold Condor Capital Logo"
         className="sponsor-gif"
       />
