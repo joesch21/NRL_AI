@@ -207,6 +207,15 @@ h2 {
   margin: 10px auto;
 }
 
+.ai-tips-image {
+  width: 100%;
+  max-width: 1000px; /* Adjust as needed */
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+}
+
+
 
 
 /* Mobile Optimization */

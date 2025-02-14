@@ -13,41 +13,18 @@ const fixtures = [
   { id: "eels-vs-storm", date: "March 9, 2025", awayTeam: "Parramatta Eels", homeTeam: "Melbourne Storm", venue: "CommBank Stadium", time: "4:05 PM AEDT" },
 ];
 
-
 export default function MatchPage() {
   const { id } = useParams();
   const fixture = fixtures.find((f) => f.id === id);
   const [prediction, setPrediction] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const getPrediction = async () => {
+  const getPrediction = () => {
     setLoading(true);
-    try {
-      const response = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model: "gpt-4",
-          messages: [
-            { role: "system", content: "You are an NRL analyst providing pre-match analysis and likely winner." },
-            { role: "user", content: `Analyze the game between ${fixture.awayTeam} and ${fixture.homeTeam} at ${fixture.venue} on ${fixture.date}. Provide key players, team strengths, and a predicted outcome with a likely score.` }
-          ],
-          temperature: 0.8,
-        }),
-      });
-
-      if (!response.ok) throw new Error("Failed to fetch prediction");
-
-      const data = await response.json();
-      setPrediction(data.choices[0].message.content);
-    } catch (error) {
-      console.error("Error fetching prediction:", error);
-    } finally {
+    setTimeout(() => {
+      setPrediction("/images/ai.png"); // Show AI-generated tips image
       setLoading(false);
-    }
+    }, 1000); // Simulate a short delay for better UX
   };
 
   return (
@@ -59,16 +36,24 @@ export default function MatchPage() {
       </div>
 
       <button className="button" onClick={getPrediction} disabled={loading}>
-        {loading ? "AI is thinking hard... Please wait!" : "Get Prediction"}
+        {loading ? "AI is thinking hard... Please wait!" : "Get AI Tips"}
       </button>
 
       {prediction && (
         <div className="match-card">
-          <p>{prediction}</p>
+          <img src={prediction} alt="AI Tips" className="ai-tips-image" />
         </div>
       )}
 
       <Link to="/" className="button">Back to Home</Link>
+      <a 
+        href="https://nrl-round-tips.vercel.app/" 
+        className="button" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        Tipping Competition
+      </a>
     </div>
   );
 }
